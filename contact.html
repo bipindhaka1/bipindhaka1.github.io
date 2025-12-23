@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Bipin</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
-     <!-- navbar has to be copied into every html file as github pages is static-->
-     <nav>
-        <img src="Logo.png" class="logo" alt="Logo">
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
+    <div class="container">
+      <nav>
+        <img src="Logo.png" class="logo" alt="Logo" />
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Me</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Me</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-    </nav>
+      </nav>
 
-
-    <div class="social-links">
+      <div class="section header-text">
         <h2>Connect with Me</h2>
-        <a href="https://www.linkedin.com/in/bipindhakal1/" target="_blank">
-            <img src="linkedin_logo.jpg" alt="LinkedIn" class="social-logo">
-        </a>
-        <a href="https://github.com/bipindhaka1" target="_blank">
-            <img src="github_logo.png" alt="GitHub" class="social-logo">
-        </a>
-        <a href="mailto:bipindhakal317@gmail.com">
-            <img src="email_logo.jpg" alt="Email" class="social-logo">
-        </a>
+        <p>
+          Feel free to reach out for collaborations or just a friendly hello!
+        </p>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/bipindhakal1/" target="_blank">
+            <img src="linkedin_logo.jpg" alt="LinkedIn" class="social-logo" />
+          </a>
+          <a href="https://github.com/bipindhaka1" target="_blank">
+            <img src="github_logo.png" alt="GitHub" class="social-logo" />
+          </a>
+          <a href="mailto:bipindhakal317@gmail.com">
+            <img src="email_logo.jpg" alt="Email" class="social-logo" />
+          </a>
+        </div>
+      </div>
     </div>
-</body>
+
+    <footer>
+      <p>
+        © 2025 Bipin | <a href="https://github.com/bipindhaka1">GitHub</a> |
+        <a href="https://www.linkedin.com/in/bipindhakal1/">LinkedIn</a>
+      </p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ff004f" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5 },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ff004f",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: { enable: true, speed: 2 },
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
 </html>

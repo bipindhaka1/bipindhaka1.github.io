@@ -1,137 +1,201 @@
+/* 1. ANIMATED BACKGROUND SETUP */
+#particles-js {
+  position: fixed; /* Keeps it in the background while scrolling */
+  width: 100%;
+  height: 100%;
+  background-color: #080808; /* The primary background color */
+  z-index: -1; /* Puts it behind all content */
+  top: 0;
+  left: 0;
+}
 
+/* 2. CORE STYLES */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
-    background: #080808;
-    color: #fff;
+  background: #080808;
+  color: #fff;
+  overflow-x: hidden;
 }
 
+/* 3. HEADER & NAVIGATION */
 #header {
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100vh;
+  /* CRITICAL: Must be transparent to see the particles JS background */
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
-    padding: 10px 10%;
+  padding: 10px 10%;
 }
 
 nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;  
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 
 .logo {
-    width: 200px;
-    margin: 10px 0;
-}
-
-nav ul {
-    padding: 0;
-    margin: 0;
+  width: 200px;
+  margin: 10px 0;
 }
 
 nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin: 10px 20px;
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none; 
-    font-size: 18px;
-    position: relative;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
 }
 
 nav ul li a::after {
-    content: '';
-    width: 0%;
-    height: 3px;
-    background: goldenrod;
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
 }
 
 nav ul li a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
+/* 4. HERO TEXT */
 .header-text {
-    margin-top: 20%;
-    text-align: center;
-}
-
-.header-text p {
-    font-size: 30px;
+  margin-top: 15%;
+  text-align: center;
 }
 
 .header-text h1 {
-    font-size: 60px;
-    margin-top: 20px;
+  font-size: 60px;
+  margin-top: 20px;
 }
 
 .header-text h1 span {
-    color: #ff004f;
+  color: #ff004f;
 }
 
-.header-text p span {
-    color: goldenrod;
+.header-text p {
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
-/* Section Styles */
+/* 5. PORTFOLIO BUTTON */
+.btn {
+  display: inline-block;
+  background: #ff004f;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 18px;
+  margin-top: 20px;
+  transition: background 0.3s, transform 0.3s;
+  border: 1px solid #ff004f;
+}
+
+.btn:hover {
+  background: transparent;
+  color: #ff004f;
+  transform: translateY(-5px);
+}
+
+/* 6. SECTIONS & FOOTER */
 .section {
-    padding: 50px 20px;
-    text-align: center;
-    color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  /* Ensure sections are transparent so particles stay visible */
+  background: transparent;
 }
 
-#home {
-    background-color: #080808;
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 40px 0;
+  /* Subtle dark overlay for readability */
+  background: rgba(17, 17, 17, 0.8);
+  margin-top: 20px;
 }
 
-#about, #services, #portfolio, #contact {
-    background-color: #222;
+footer p {
+  color: #ababab;
+  font-size: 14px;
 }
 
-.section h2 {
-    margin-bottom: 20px;
-    font-size: 2em;
+footer a {
+  color: #ff004f;
+  text-decoration: none;
+  margin: 0 5px;
 }
 
-.section p {
-    font-size: 1.2em;
-    margin: 0 auto;
-    max-width: 800px;
+footer a:hover {
+  text-decoration: underline;
 }
-.section img {
-    width: 200px;
-    margin: 10px 0;
+/* Styling for the About Me profile picture */
+.profile {
+  width: 250px;
+  border-radius: 15px; /* Rounded corners */
+  margin: 20px 0;
+  border: 3px solid #ff004f; /* Matches your accent color */
 }
 
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left; /* Easier to read long paragraphs */
+  line-height: 1.8;
+}
 
+.about-text h1 {
+  margin-bottom: 20px;
+  color: #ff004f;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ababab;
+}
+
+/* Styling for the social links container */
 .social-links {
-    text-align: center;
-    margin-top: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
 }
 
+/* Individual logo styling */
 .social-logo {
-    width: 50px;
-    margin: 0 10px;
-    transition: transform 0.3s ease;
+  width: 60px; /* Adjust size as needed */
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover animation */
 .social-logo:hover {
-    transform: scale(1.1);
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(255, 0, 79, 0.3); /* Subtle glow in your brand color */
 }
+
+/* Keep the rest of your header-text and footer styles from previous steps */

@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Portfolio Website - Bipin</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div id="particles-js"></div>
+
     <div id="header">
-        <div class="container">
-            <!-- navbar has to be copied into every html file as github pages is static-->
-            <nav>
-                <img src="Logo.png" class="logo" alt="Logo">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Me</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="header-text">
-                <h1>Hello World... </h1>
-            </div>
+      <div class="container">
+        <nav>
+          <img src="Logo.png" class="logo" alt="Logo" />
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <h1>Hello World, I'm <span>Bipin</span></h1>
+          <p>Engineering the Skies & Exploring Code</p>
+          <a href="portfolio.html" class="btn">View Portfolio</a>
         </div>
+      </div>
     </div>
 
-    <div id="home" class="section">
-        <p>Welcome to my personal portfolio website!</p>
-    </div>
-    </div>
+    <footer>
+      <p>© 2025 Bipin | <a href="#">GitHub</a> | <a href="#">LinkedIn</a></p>
+    </footer>
 
-</body>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 80, density: { enable: true, value_area: 800 } },
+          color: { value: "#ff004f" },
+          shape: { type: "circle" },
+          opacity: { value: 0.5, random: false },
+          size: { value: 3, random: true },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#ff004f",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "none",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
+  </body>
 </html>
